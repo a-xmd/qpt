@@ -1,0 +1,55 @@
+/*! inspired by modern-normalize v3.0.1 | MIT License | https://github.com/sindresorhus/modern-normalize */
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo,
+    monospace;
+  font-size: 1em;
+}
+
+small {
+  font-size: 80%;
+}
+
+table {
+  border-color: currentcolor;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1;
+  margin: 0;
+}
+
+summary {
+  display: list-item;
+}
