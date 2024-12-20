@@ -1,13 +1,18 @@
-import { handle } from "./tmp-article.ts";
+import express from "express";
+import { articleRouter } from "./controllers/article.ts";
 
-Bun.serve({
-  port: 6002,
-  fetch(req) {
-    const path = new URL(req.url).pathname;
-    if (path.startsWith("/article")) {
-      return handle(req);
-    }
-    console.log({ path });
-    return new Response("Page not found", { status: 404 });
-  },
+const app = express();
+const port = 6002;
+
+app.get("/", (_req, res) => {
+  res.json("🚀");
+});
+app.use("/article", articleRouter);
+
+app.listen(port, () => {
+  console.log(`🟢 Listening on port ${port}...`);
+});
+
+app.use((_req, res) => {
+  res.sendStatus(404);
 });
