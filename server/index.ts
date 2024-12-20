@@ -1,13 +1,12 @@
 import express from "express";
 import { articleRouter } from "./controllers/article.ts";
+import { commentRouter } from "./controllers/comment.ts";
 
 const app = express();
 const port = 6002;
 
-app.get("/", (_req, res) => {
-  res.json("🚀");
-});
 app.use("/article", articleRouter);
+app.use("/comment", commentRouter);
 
 app.listen(port, () => {
   console.log(`🟢 Listening on port ${port}...`);

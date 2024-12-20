@@ -7,7 +7,7 @@ quick prototyping template with
 - vite + react (default port `5173`)
 - express/bun server (port `6002`, proxied to `/api` )
 
-experimenting with sqlite, builing api etc.
+experimenting with sqlite, api design and more
 
 ## run
 ```console
