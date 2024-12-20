@@ -1,0 +1,5 @@
+-- CREATE TABLE article (
+--    id integer primary key,
+--    title text not null,
+--    created_at text
+--)
