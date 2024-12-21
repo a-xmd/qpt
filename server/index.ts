@@ -1,6 +1,12 @@
 import express from "express";
-import { articleRouter } from "./controllers/article.ts";
-import { commentRouter } from "./controllers/comment.ts";
+// @todo: import routers from different file
+import {
+  articleRouter,
+  commentRouter,
+} from "./controllers/decorators/request-methods.ts";
+
+import "./controllers/article.ts";
+import "./controllers/comment.ts";
 
 const app = express();
 const port = 6002;

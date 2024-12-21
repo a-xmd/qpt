@@ -1,15 +1,13 @@
-import express, { type Request, type Response } from "express";
+import { type Request, type Response } from "express";
 import { Get } from "./decorators/request-methods.ts";
 
-export const commentRouter = express.Router();
-
 export class CommentController {
-  @Get<CommentController>("/", commentRouter)
+  @Get<CommentController>("/")
   async getAll(_req: Request, res: Response) {
     res.json("multiple comments");
   }
 
-  @Get<CommentController>("/:id", commentRouter)
+  @Get<CommentController>("/:id")
   async get(_req: Request, res: Response) {
     res.json("single comment");
   }
