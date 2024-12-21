@@ -2,8 +2,8 @@ import { sqliteDb } from "../db.ts";
 import type { Database } from "bun:sqlite";
 
 export interface IArticleRepository {
-  fetch: (id: string) => Promise<any>;
-  fetchAll: () => Promise<any>;
+  fetch: (id: string) => Promise<unknown>;
+  fetchAll: () => Promise<unknown>;
 }
 export class ArticleRepositorySqlite implements IArticleRepository {
   #db: Database = sqliteDb;
